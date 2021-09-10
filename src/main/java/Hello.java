@@ -43,7 +43,7 @@ public class Hello {
 			    .custom("Group", "USER GROUP")
 			    .custom("Country", "USER COUNTRY")
 			    .custom("State", "USER STATE")
-			    .custom("City", "USER COUNTRY")
+			    .custom("City", "USER CITY")
                             .build();
 
     boolean flagValue = client.boolVariation(FEATURE_FLAG_KEY, user, false);
