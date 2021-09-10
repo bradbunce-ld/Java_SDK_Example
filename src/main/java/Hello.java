@@ -6,10 +6,10 @@ import java.io.IOException;
 public class Hello {
 
   // Set SDK_KEY to your LaunchDarkly SDK key.
-  static final String SDK_KEY = "sdk-7ab8ac35-bac9-4bc0-9d67-d7ab4d7acc7d";
+  static final String SDK_KEY = "YOUR SDK KEY";
 
   // Set FEATURE_FLAG_KEY to the feature flag key you want to evaluate.
-  static final String FEATURE_FLAG_KEY = "java-sdk-test-flag-1";
+  static final String FEATURE_FLAG_KEY = "YOUR FLAG KEY";
 
   private static void showMessage(String s) {
     System.out.println("*** " + s);
@@ -33,17 +33,17 @@ public class Hello {
     
     // Set up the user properties. This user should appear on your LaunchDarkly users dashboard
     // soon after you run the demo.
-    LDUser user = new LDUser.Builder("671749")
-                            .name("Brad Bunce")
-			    .firstName("Brad")
-			    .lastName("Bunce")
-			    .email("bbunce@launchdarkly.com")
-			    .custom("Cell", "(919)802-8222")
-			    .custom("Company", "LaunchDarkly")
-			    .custom("Group", "SEA")
-			    .custom("Country", "US")
-			    .custom("State", "NC")
-			    .custom("City", "Apex")
+    LDUser user = new LDUser.Builder("USER KEY")
+                            .name("USER NAME")
+			    .firstName("USER FIRSTNAME")
+			    .lastName("USER LASTNAME")
+			    .email("USER EMAIL ADDRESS")
+			    .custom("Cell", "USER CELL NUMBER")
+			    .custom("Company", "USER COMPANY")
+			    .custom("Group", "USER GROUP")
+			    .custom("Country", "USER COUNTRY")
+			    .custom("State", "USER STATE")
+			    .custom("City", "USER COUNTRY")
                             .build();
 
     boolean flagValue = client.boolVariation(FEATURE_FLAG_KEY, user, false);
